@@ -1,6 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
+import Header from '@/components/layouts/Header'
 import { Plugins } from '@/plugins'
-import Header from '../components/Header'
 
 export const Route = createRootRoute({
   component: () => (
