@@ -2,31 +2,15 @@ import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackRouter } from '@tanstack/router-plugin/vite'
 import viteReact from '@vitejs/plugin-react'
-import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    AutoImport({
-      imports: [
-        'react',
-      ],
-      dts: 'src/auto-imports.d.ts',
-    }),
     tanstackRouter({ target: 'react', autoCodeSplitting: true }),
     viteReact(),
     tailwindcss(),
   ],
-  // cấu hình proxy server
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
-        changeOrigin: true,
-      },
-    },
-  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
