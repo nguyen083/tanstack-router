@@ -1,7 +1,7 @@
 import type { InternalAxiosRequestConfig } from 'axios'
 import axios, { isAxiosError } from 'axios'
+import { NProgressCustom } from '@/plugins/nprogress'
 import { HTTPError } from '@/types/error'
-import { NProgressCustom } from './nprogress'
 
 const nprogress = NProgressCustom()
 
