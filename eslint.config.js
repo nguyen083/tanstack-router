@@ -20,6 +20,7 @@ export default antfu({
     "eslint.config.js",
     "components.json",
     ".cta.json",
+    ".github",
   ],
   rules: {
     "react-refresh/only-export-components": "off",
